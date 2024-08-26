@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(16, 123, 169);
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 500px;
+    width: 840px;
+    display: flex;
+    border:20px solid rgb(14, 91, 124);
+
+    overflow: hidden; /* Ensure contents do not overflow */
+}
+
+.leftbox, .rightbox {
+    height: 100%;
+    width: 50%; /* Ensure both boxes take up half the width of the container */
+}
+
+.leftbox {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    background-color: #FF057C;
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+    padding: 40px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.rightbox {
+    background-color: #7C64D5;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.rate {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-around;
+}
+
+@media (max-width: 900px) {
+    .box {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .leftbox, .rightbox {
+        width: 100%;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .leftbox {
+        padding: 20px;
+        gap: 40px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
